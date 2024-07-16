@@ -10,19 +10,19 @@ Millard Lab: https://millardlab.org
 UniProt: https://www.uniprot.org/
 
 
-# ESM-2 model
+### ESM-2 model
 
-# Install Python dependencies (specific versions are in environment.yml)
+### Install Python dependencies (specific versions are in environment.yml)
 python3 -m pip install numpy pandas matplotlib torch
 python3 -m pip install fair-esm transformers
 
-# Example 1: estimate the residue conservation of each sequence in a fasta
+### Example 1: estimate the residue conservation of each sequence in a fasta
 python3 conservation_from_fasta.py sample_data/sequences.fasta sample_data/conservation.csv
 
-# Optional program for example 2
+### Optional program for example 2
 sudo apt install dssp
 
-# Example 2: estimate conservation for uniprot sequences, map values to alphafold models, and make annotated figures
+### Example 2: estimate conservation for uniprot sequences, map values to alphafold models, and make annotated figures
 python3 conservation_from_uniprot.py sample_data/uniprot.txt sample_data/annotated_outputs
 ```
 ### Installing dependencies
@@ -42,10 +42,10 @@ python3 -m pip install fair-esm transformers
 
 If you do not have `conda` installed, you can download from the [Anaconda website](https://www.anaconda.com/).
 ```
-# Create a conda environment using the yml file
+### Create a conda environment using the yml file
 conda env create -f environment.yml
 
-# Activate the environment
+### Activate the environment
 conda activate kibby
 ```
 If you want to exit the environment:
@@ -82,7 +82,7 @@ If this is the first time you're using a particular protein language model, plea
 A minimal script which sequences from a fasta file and estimates conservation scores for each sequence.
 
 ```
-# run using example data
+### run using example data
 python3 conservation_from_fasta.py sample_data/sequences.fasta sample_data/conservation.csv
 ```
 
@@ -115,7 +115,7 @@ optional arguments:
 A script which takes a list of UniProt IDs, downloads each sequence and estimates conservation scores. The script will also download the AlphaFold model and map the conservation scores onto the pdb file using the b-factor column. These scores can be viewed on using the PyMOL command `spectrum b, white_red, minimum=0.35, maximum=0.8`. Domain annotations will be downloaded from UniProt in gff format and secondary structure annotations will be added by running `dssp` on the AlphaFold model.
 
 ```
-# run using example data
+### run using example data
 python3 conservation_from_uniprot.py sample_data/uniprot.txt sample_data/annotated_outputs
 ```
 
@@ -149,7 +149,7 @@ optional arguments:
   -dssp DSSP        The dssp binary for generating secondary structure annotations (default: dssp)
   -sleep SLEEP      How many seconds to wait between each entry (default: 0.5)
 ```
-# How to do this manually
+### How to do this manually
 
 This section describes the bare minimum code that is required for generating embedding-based conservation analysis.
 
