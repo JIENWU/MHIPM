@@ -12,14 +12,6 @@ UniProt: https://www.uniprot.org/
 
 # ESM-2 model
 
-Don't have time for the full guide? Thats okay!
-
-Here are the BASH commands:
-```
-# Download this repository
-git clone https://github.com/waylandy/kibby
-cd kibby
-
 # Install Python dependencies (specific versions are in environment.yml)
 python3 -m pip install numpy pandas matplotlib torch
 python3 -m pip install fair-esm transformers
