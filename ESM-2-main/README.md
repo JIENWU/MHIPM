@@ -1,11 +1,3 @@
-# Introduction
-
-This respository contains the code and dataset for:
-
-[**Alignment-free estimation of sequence conservation for identifying functional sites using protein sequence embeddings.**](https://academic.oup.com/bib/article/24/1/bbac599/6984799)\
-Wayland Yeung, Zhongliang Zhou, Sheng Li, Natarajan Kannan.\
-*Briefings in Bioinformatics.* (2023)
-
 # Quick start guide
 
 Don't have time for the full guide? Thats okay!
@@ -29,21 +21,6 @@ sudo apt install dssp
 # Example 2: estimate conservation for uniprot sequences, map values to alphafold models, and make annotated figures
 python3 conservation_from_uniprot.py sample_data/uniprot.txt sample_data/annotated_outputs
 ```
-
-# Installing dependencies
-
-### Downloading this repository
-
-This repository contains the code and files needed to generate sequence embeddings using a pre-trained protein language model, then estimate sequence conservation using linear regression.
-```
-# Download this repository
-git clone https://github.com/waylandy/kibby
-
-cd kibby
-```
-
-If you are an advanced user with pre-generated sequence embeddings, our regression parameters for various pre-trained protein language model can be found under the "linear_models" directory. Parameters are stored and compressed numpy arrays and consist of the linear coefficients and intercept. To make predictions, simply take the dot product of the sequence embedding and the linear coefficients then add the intercept.
-
 ### Installing dependencies
 
 Our code is written in Python 3 and requires several Python packages to run.
