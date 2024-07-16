@@ -285,7 +285,7 @@ if __name__ == '__main__':
             validation_data=({'input1': x_validation_1_Behavior1, 'input2': x_validation_2_Behavior1,
                               'input3': x_validation_1_Behavior2, 'input4': x_validation_2_Behavior2,
                               },
-                             y_validation), callbacks=[reduce_lr], epochs=50, batch_size=64)
+                             y_validation), callbacks=[reduce_lr], epochs=150, batch_size=64)
 
         # —————————————————————— 训练模型 ——————————————————————
         ModelName = 'my_model' + str(CounterT) + '.h5'
