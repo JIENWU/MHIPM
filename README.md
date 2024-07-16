@@ -191,7 +191,16 @@ HPIDB: https://hpidb.igbb.msstate.edu/
 Millard Lab: https://millardlab.org  
 UniProt: https://www.uniprot.org/
 
-
+    @Article{
+      Title                    = {MHIPM: Accurate Prediction of Microbe-Host interactions Using Multi-View Features with self-attention mechanism on Heterogeneous Microbial Network},
+      Author                   = {Jie Pan, Guangming Zhang, Yong Yang, Wenli Yang, Ning Mao, Zhuhong You, Jie Feng, Shiwei Wang, and Yanmei Sun},
+      Journal                  = {*****},
+      Volume                   = {*****},
+      Number                   = {*****},
+      Pages                    = {*****},
+      Year                     = {*****}
+    }
+    
 
 
 
