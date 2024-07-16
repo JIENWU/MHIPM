@@ -1,4 +1,4 @@
-## MHIPM: Accurate Prediction of Microbe-Host interactions Using Multi-View Features with self-attention mechanism on Heterogeneous Microbial Network
+## MHIPM: Accurate Prediction of Microbe-Host interactions Using Multi-View Features with self-attention mechanism on Heterogeneous Microbial Network.
 
 ### ESM-2 model
 
