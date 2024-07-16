@@ -2,7 +2,11 @@
 Source code and datasets for MHIPM mode
 
 
-The human-virus and human-bacteria interactions datasets is colleced from:  
-IntAct: https://www.ebi.ac.uk/intact/
-VirHostNet: https://virhostnet.prabi.fr/
-HPIDB: https://hpidb.igbb.msstate.edu/
+The human-virus and human-bacteria interactions datasets are colleced from:  
+IntAct: https://www.ebi.ac.uk/intact/  
+VirHostNet: https://virhostnet.prabi.fr/  
+HPIDB: https://hpidb.igbb.msstate.edu/ 
+
+The phage-host interactions dataset is download from:  
+Millard Lab: https://millardlab.org
+UniProt: https://www.uniprot.org/
