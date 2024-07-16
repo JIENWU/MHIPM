@@ -8,5 +8,5 @@ VirHostNet: https://virhostnet.prabi.fr/
 HPIDB: https://hpidb.igbb.msstate.edu/ 
 
 The phage-host interactions dataset is download from:  
-Millard Lab: https://millardlab.org
+Millard Lab: https://millardlab.org  
 UniProt: https://www.uniprot.org/
