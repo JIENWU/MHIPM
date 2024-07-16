@@ -1,5 +1,5 @@
 ## MHIPM: Accurate Prediction of Microbe-Host interactions Using Multi-View Features with self-attention mechanism on Heterogeneous Microbial Network.
-
+![workflow of MHIPM model](https://github.com/JIENWU/MHIPM/blob/main/MHIPM.png)
 ### ESM-2 model
 
 ### Install Python dependencies (specific versions are in environment.yml)
