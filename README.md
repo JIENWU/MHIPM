@@ -10,7 +10,7 @@ Millard Lab: https://millardlab.org
 UniProt: https://www.uniprot.org/
 
 
-# Quick start guide
+# ESM-2 model
 
 Don't have time for the full guide? Thats okay!
 
