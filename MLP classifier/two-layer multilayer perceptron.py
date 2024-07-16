@@ -12,21 +12,17 @@ from keras.callbacks import ReduceLROnPlateau
 import csv
 
 csv.field_size_limit(500 * 1024 * 1024)
-# 读的字段太大，https://blog.csdn.net/dm_learner/article/details/79028357
-# import sys   # 或者
+# import sys   
 # import csv
 # csv.field_size_limit(sys.maxsize)
 import numpy as np
 import math
 
-
-# 定义函数
 def ReadMyCsv1(SaveList, fileName):
     csv_reader = csv.reader(open(fileName))
     for row in csv_reader:  # 把每个rna疾病对加入OriginalData，注意表头
         SaveList.append(row)
     return
-
 
 def ReadMyCsv2(SaveList, fileName):
     csv_reader = csv.reader(open(fileName))
@@ -35,7 +31,6 @@ def ReadMyCsv2(SaveList, fileName):
             row[i] = float(row[i])
         SaveList.append(row)
     return
-
 
 def ReadMyCsv3(SaveList, fileName):
     csv_reader = csv.reader(open(fileName))
@@ -53,7 +48,6 @@ def StorFile(data, fileName):
         writer = csv.writer(csvfile)
         writer.writerows(data)
     return
-
 
 def GenerateEmbeddingFeature(SequenceList, EmbeddingList, PaddingLength):  # 产生所有miRNA/drug的embedding表示
     SampleFeature = []
@@ -180,15 +174,13 @@ def MyChange(list):
 
 if __name__ == '__main__':
 
-    # ---------特征输入-------
+
 
     AllNodeBehavior1 = []
     ReadMyCsv1(AllNodeBehavior1, 'Inter-view feature.csv')
 
     AllNodeBehavior2 = []
     ReadMyCsv1(AllNodeBehavior2, 'Intra_view feature.csv')
-
-    # ---------划分训练-------
 
     PositiveSample_Train = []
     ReadMyCsv1(PositiveSample_Train, 'PositiveSample_Train.csv')
@@ -253,25 +245,18 @@ if __name__ == '__main__':
         input4 = Input(shape=(len(x_train_2_Behavior2[0]),), name='input4')
         x4 = Dense(512, activation='relu', activity_regularizer=regularizers.l2(0.0001))(input4)
 
-        # ——连接——
         flatten = keras.layers.concatenate([x1, x2, x3, x4])
 
-        # ——隐藏层
         hidden = Dense(128, activation='relu', name='hidden1', activity_regularizer=regularizers.l2(0.0001))(flatten)
         hidden = Dropout(rate=0.2)(hidden)
         hidden = Dense(64, activation='relu', name='hidden2', activity_regularizer=regularizers.l2(0.0001))(hidden)
         hidden = Dropout(rate=0.2)(hidden)
 
 
-
-        # ——输出层——
         output = Dense(num_classes, activation='softmax', name='output')(hidden)  # category
         model = Model(inputs=[input1, input2, input3, input4], outputs=output)
 
-        # 打印网络结构
         model.summary()
-
-        # ——编译——
         model.compile(optimizer='adam', loss='binary_crossentropy', metrics=['accuracy'])
 
         # —————————————————————— train ——————————————————————
@@ -287,7 +272,7 @@ if __name__ == '__main__':
                               },
                              y_validation), callbacks=[reduce_lr], epochs=150, batch_size=64)
 
-        # —————————————————————— 训练模型 ——————————————————————
+        # —————————————————————— traning model ——————————————————————
         ModelName = 'my_model' + str(CounterT) + '.h5'
         model.save(ModelName)  # 保存模型
 
@@ -301,7 +286,6 @@ if __name__ == '__main__':
         print(ModelTestOutput.shape)
         print(type(ModelTestOutput))
         # StorFile(ModelTestOutput, 'ModelTestOutput.csv')
-        # 输出值为label、1的概率
         LabelPredictionProb = []
         LabelPrediction = []
 
